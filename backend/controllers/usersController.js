@@ -1,10 +1,10 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/cathAsyncErrorsMiddleware");
 const dotenv = require("dotenv");
-const db = require("../config/database");
+const db = require("../database");
 const asyncHandler = require("express-async-handler");
 
-dotenv.config({ path: "backend/config/config.env" });
+
 
 exports.getListOfUsers = catchAsyncErrors(async (request, response, next) => {
   let sql = `SELECT * FROM users`;

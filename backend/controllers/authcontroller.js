@@ -4,9 +4,9 @@ const sendToken = require("../utils/jwtToken");
 const sendAdminToken = require("../utils/adminjwtToken");
 // const sendMail = require("../utils/mailer");
 const dotenv = require("dotenv");
-const db = require("../config/database");
+const db = require("../database");
 const bcrypt = require('bcrypt');
-dotenv.config({ path: "backend/config/config.env" });
+
 
 exports.signup = catchAsyncErrors(async (request, response, next) => {
   const { username, email, password, confirmPassword } = request.body;

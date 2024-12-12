@@ -1,9 +1,9 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/cathAsyncErrorsMiddleware");
 const dotenv = require("dotenv");
-const db = require("../config/database");
+const db = require("../database");
 
-dotenv.config({ path: "backend/config/config.env" });
+
 
 exports.updateresult = catchAsyncErrors(async (request, response, next) => {
   const { result, amount, bet, action, multiplier } = request.body;
